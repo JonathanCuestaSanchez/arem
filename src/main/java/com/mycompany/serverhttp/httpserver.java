@@ -30,7 +30,9 @@ public class httpserver {
             } catch (IOException e) {
                 System.err.println("Accept failed.");
                 System.exit(1);
-            }            
+            } 
+            multisolicitud despliegue = new multisolicitud(clientSocket);
+            despliegue.start();
         }
     }
 }

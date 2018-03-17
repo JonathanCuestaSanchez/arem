@@ -58,12 +58,7 @@ public class multisolicitud extends Thread {
                             + inputLine;
                     out.write(outputLine);
 
-                } else if (inputLine.endsWith(".jpg")) {
-                    byte[] bytes;
-                    bytes = Files.readAllBytes(new File("./" + inputLine).toPath());
-                    data = "" + bytes.length;
-                    format = "image/html";
-                }
+                } 
             }
         } catch (IOException ex) {
             Logger.getLogger(multisolicitud.class.getName()).log(Level.SEVERE, null, ex);
